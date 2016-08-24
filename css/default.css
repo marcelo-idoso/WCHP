@@ -7,6 +7,7 @@
 body{
     background-color: #FFF ;
     font-family: Tahoma;
+    background-color: #ECECEC;
 }
 
 /* Definição do Tag Header da Pagina*/
@@ -16,58 +17,58 @@ header{
     float: left;
     background-color: #ECECEC;
 }
-/* Definição da Div Topo*/
-header #topo{
-    width: 1120px;
-    height: 144px;
-    margin: 0 auto;
-}
-/* Definição da Imagem do Logo*/
-header #topo #logo{
-    width: 228px;
-    height: 100px;
-    float: left;
-    margin-top: 20px;
-}
-header #topo #logo img{
-    width: 200px;
-    height: 100px;
-}
-/* Definição da topo Direita*/
-header #topo-right{
-    width: 455px ;
-    height: 144px;
-    float: right;
-}
-/* Definição da topo Direita Paragrafo*/
-header #topo-right p{
-    width: 455px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    color: #555555;
-    font-family: Tahoma;
-    font-size: 14px ;
-    text-align: right;
-}
-/* Definição da topo Direita Paragrafo Link*/
-header #topo-right p a{
-    color: #09F;
-    text-decoration: none;
-}
-/* Definição da topo Direita Formulario */
-header #topo-right form input{
-    width: 420px;
-    height: 40px;
-    border: none;
-    float: right;
-    background: #FFF;
-    box-shadow: 0px 0px 1px 2px #CFCDCD ;
-    font-family: Tahoma;
-    font-size: 16px;
-    color: #9E9E9E;
-    padding: 0px 10px 0px 10px;
-    text-align: right;
-}
+    /* Definição da Div Topo*/
+    header #topo{
+        width: 1120px;
+        height: 144px;
+        margin: 0 auto;
+    }
+        /* Definição da Imagem do Logo*/
+        header #topo #logo{
+            width: 228px;
+            height: 100px;
+            float: left;
+            margin-top: 20px;
+        }
+            header #topo #logo img{
+                width: 200px;
+                height: 100px;
+            }
+    /* Definição da topo Direita*/
+    header #topo-right{
+        width: 455px ;
+        height: 144px;
+        float: right;
+    }
+        /* Definição da topo Direita Paragrafo*/
+        header #topo-right p{
+            width: 455px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            color: #555555;
+            font-family: Tahoma;
+            font-size: 14px ;
+            text-align: right;
+        }
+            /* Definição da topo Direita Paragrafo Link*/
+            header #topo-right p a{
+                color: #09F;
+                text-decoration: none;
+            }
+        /* Definição da topo Direita Formulario */
+        header #topo-right form input{
+            width: 420px;
+            height: 40px;
+            border: none;
+            float: right;
+            background: #FFF;
+            box-shadow: 0px 0px 1px 2px #CFCDCD ;
+            font-family: Tahoma;
+            font-size: 16px;
+            color: #9E9E9E;
+            padding: 0px 10px 0px 10px;
+            text-align: right;
+        }
 
 /* Definição do Menu*/
 
@@ -79,34 +80,32 @@ header #topo-right form input{
     float: left;
 }
 
-#menu nav{
-    width: 1120px;
-    height: 50px;
-    margin: 0 auto;
-}
-#menu nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu nav ul li{
-    float: left;
-    display: inline;
-    width: 199px;
-    height: auto;
-    padding: 15px 10px 16px 10px;
-    color: #FFF;
-    margin-right: 5px;
-    text-align: center;
-    font-size: 16px;
-}
-
-#menu nav ul li:hover{
-    background: #FFF;
-    color: #09F;
-    cursor: pointer;
-}
+    #menu nav{
+        width: 1120px;
+        height: 50px;
+        margin: 0 auto;
+        }
+        #menu nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            }
+            #menu nav ul li{
+                float: left;
+                display: inline;
+                width: 199px;
+                height: auto;
+                padding: 15px 10px 16px 10px;
+                color: #FFF;
+                margin-right: 5px;
+                text-align: center;
+                font-size: 16px;
+            }
+            #menu nav ul li:hover{
+                background: #FFF;
+                color: #09F;
+                cursor: pointer;
+            }
 
 
 main{
@@ -117,45 +116,98 @@ main{
     margin-bottom: 30px;
 }
 
-main section#contente{
-    width: 1120px;
-    height: auto;
-    margin: 0 auto;
-}
+    main section#contente{
+        width: 1120px;
+        height: auto;
+        margin: 0 auto;
+    }
 
-main section#contente section#conteudo{
-    width: 700px;
-    height: auto;
-    float: left;
-}
+        main section#contente section#conteudo{
+            width: 700px;
+            height: auto;
+            float: left;
+        }
 
 
-main section#contente section#conteudo section#banner{
-    width: 690px;
-    height: 290px;
-    float: left;
-    margin-top: 20px;
-    
-}
-main section#contente section#conteudo section#banner img{
-    min-width: 690px;
-    min-height: 290px;
-    max-width: 690px;
-    max-height: 290px;
-}
+            main section#contente section#conteudo section#banner{
+                width: 690px;
+                height: 290px;
+                float: left;
+                margin-top: 20px;
+            }
+                main section#contente section#conteudo section#banner img{
+                    min-width: 690px;
+                    min-height: 290px;
+                    max-width: 690px;
+                    max-height: 290px;
+                }
 
-main section#contente section#conteudo section#artigos{
-    width: 690px;
-    height: 500px;
-    float: left;
-    background: #CCC;
-    margin-top: 20px;
-}
+            main section#contente section#conteudo section#artigos{
+                width: 690px;
+                height: 500px;
+                float: left;
+                background: #CCC;
+                margin-top: 20px;
+            }
 
-main section#contente section#conteudo section#publicidade-rodape{
-    width: 690px;
-    height: 200px;
-    float: left;
-    background: #CCCC90;
-    margin-top: 20px;
-}
+            main section#contente section#conteudo section#publicidade-rodape{
+                width: 690px;
+                height: 200px;
+                float: left;
+                background: #CCCC90;
+                margin-top: 20px;
+            }
+        main section#contente section#sidebar{
+            width: 400px;
+            height: auto;
+            float: right;
+        }
+            main section#contente section#sidebar section#ultimas_noticias{
+                height: 290px;
+                font-size: 14px;
+                margin-top: 20px;
+                border-top: 0px;
+
+            }
+                main section#contente section#sidebar section#ultimas_noticias h1{
+                    font-size: 16px;
+                    background-color: #297BAA;
+                    color: #FFF;
+                    padding: 7px 10px 7px 7px ;
+                    width: 383px;
+                    height: 20px;
+                    text-align: right;
+                    border-radius: 7px 7px 0px 0px; ;
+                }
+                main section#contente section#sidebar section#ultimas_noticias ul{
+                    list-style: none;
+                    margin: 0px;
+                    padding: 0px;
+                    border: 1px solid #CFCDCD;
+                    border-top: 0px;
+                }
+            
+                    main section#contente section#sidebar section#ultimas_noticias ul li{
+                        color: #3582AF;
+                        width: 378px;
+                        height: 30px;
+                        padding: 12px 10px 0px 10px;
+                        text-align: right;
+                    }
+                    
+                    main section#contente section#sidebar section#ultimas_noticias ul li:hover{
+                        background-color: #C1C1C1;
+                        transition: all 0.5s ease-in-out;
+                        cursor: pointer;
+                    }
+                    
+            main section#contente section#sidebar section#publicidade-sidebar{
+                margin-top: 20px;
+                width: 400px;
+                height: 200px;
+            }
+            main section#contente section#sidebar section#publicidade-sidebar img{
+                width: 400px;
+                height: 200px;
+            }
+                

@@ -39,16 +39,39 @@ and open the template in the editor.
         <main>
             <section id="contente">
                 <section id="conteudo">
+                    
                     <section id="banner">
                         <img src="imagem/banner01.jpg" alt="banner" />
                     </section>
-                    
-                    
+                                       
                     <section id="artigos">
                         
                     </section>
+                    
                     <section id="publicidade-rodape">
                         
+                    
+                    </section>
+
+                </section>
+                
+                <section id="sidebar">           
+                    <section id="ultimas_noticias">
+                        <h1>Últimas Postagens</h1>
+                        
+                        <ul>
+                            <li>Receita Federal Libera IRRF 2016</li>
+                            <li>Tribunal de Contas Parabenisa a Prodata Informatica</li>
+                            <li>Receita Federal Libera IRRF 2016</li>
+                            <li>Tribunal de Contas Parabenisa a Prodata Informatica</li>
+                            <li>Receita Federal Libera IRRF 2016</li>
+                            <li>Tribunal de Contas Parabenisa a Prodata Informatica</li>
+                            
+                        </ul>
+                    </section>
+                    
+                    <section id="publicidade-sidebar">
+                        <img src="imagem/Publicidade_ou_marketing.jpg" alt="" />
                     </section>
                 </section>
             </section>

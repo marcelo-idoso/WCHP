@@ -107,3 +107,55 @@ header #topo-right form input{
     color: #09F;
     cursor: pointer;
 }
+
+
+main{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+main section#contente{
+    width: 1120px;
+    height: auto;
+    margin: 0 auto;
+}
+
+main section#contente section#conteudo{
+    width: 700px;
+    height: auto;
+    float: left;
+}
+
+
+main section#contente section#conteudo section#banner{
+    width: 690px;
+    height: 290px;
+    float: left;
+    margin-top: 20px;
+    
+}
+main section#contente section#conteudo section#banner img{
+    min-width: 690px;
+    min-height: 290px;
+    max-width: 690px;
+    max-height: 290px;
+}
+
+main section#contente section#conteudo section#artigos{
+    width: 690px;
+    height: 500px;
+    float: left;
+    background: #CCC;
+    margin-top: 20px;
+}
+
+main section#contente section#conteudo section#publicidade-rodape{
+    width: 690px;
+    height: 200px;
+    float: left;
+    background: #CCCC90;
+    margin-top: 20px;
+}

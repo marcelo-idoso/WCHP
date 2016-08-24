@@ -35,5 +35,25 @@ and open the template in the editor.
                 </ul>
             </nav>
         </div>
+        
+        <main>
+            <section id="contente">
+                <section id="conteudo">
+                    <section id="banner">
+                        <img src="imagem/banner01.jpg" alt="banner" />
+                    </section>
+                    
+                    
+                    <section id="artigos">
+                        
+                    </section>
+                    <section id="publicidade-rodape">
+                        
+                    </section>
+                </section>
+            </section>
+        </main>
+        
+        
     </body>
 </html>

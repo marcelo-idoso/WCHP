@@ -8,13 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>WCHP</title>
-        <link rel="stylesheet" type="text/css" href="css/default.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/default2.css" media="screen"/>
     </head>
     <body>
         <header>
             <div id="topo">
                 <div id="logo">
-                    <img src="imagem/php_logo.png" alt="" />
+                    <img src="imagem/banner01.jpg" alt="" />
                 </div>
                 <div id="topo-right">
                     <p>Olá, Seja bem-Vindo <a href=""> Faça Login </a> ou <a href=""> Cadastre-se </a></p>

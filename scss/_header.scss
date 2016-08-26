@@ -1,16 +1,24 @@
 body{
     > header{
         height: 144px;
-        background-color: #ECECEC;
+        background-color: $background_header;
         > div#container{
             > div#topo{
+                @include make-row;
                 padding-top: 20px;
                 > div#logo{
+                    @include make-md-column(2);
+                    @include make-sm-column(2);
+                    @include make-xs-column(8);
+                    @include make-md-column-offset(0);
+                    @include make-sm-column-offset(0);
+                    @include make-xs-column-offset(2);
                     padding-left: 5px;
                     padding-right: 5px;
                 } 
                 > div#pesquisa{
-                    float: right;
+                    @include make-md-column(5);
+                    @include make-md-column-offset(4);
                     padding-right: 5px;
                     > p{
                         color: #555555;
@@ -28,7 +36,7 @@ body{
                             > input{
                                 border: 0;
                                 box-shadow: none;
-                                background: #FFF;
+                                background: $color_menu;
                                 font-family: $font_main;
                                 text-align: right;
                                 font-size: 16px;
@@ -51,6 +59,53 @@ body{
                         }
                     }
                 }
+            }
+        }
+    }
+    > div#menu_navegacao {
+        background: #297BAA;
+        > div.container{
+            padding: 0px;
+            > nav#menu_content{
+                border: none;
+                border-radius: 0px;
+                margin: 0;
+                background: none;
+                > div.container-fluid{
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    > div#bs-example-navbar-collapse-1{
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        > ul {
+                            @include make-md-column(12);
+                            padding: 0px;
+                            li {
+                                @include make-md-column(2.4);
+                                padding: 0px;
+                                > a {
+                                    font-family: $font_main;
+                                    font-size: 16px;
+                                    color: $color_menu;
+                                    text-align: center;
+                                }
+                            }
+                            li:hover {
+                                >a{
+                                    background: $color_menu;
+                                    color: #09F;  
+                                }
+                            }
+                            > li.active{
+                                > a {
+                                    background: $background_header;
+                                    color: #09F;                                     
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }
         }
     }

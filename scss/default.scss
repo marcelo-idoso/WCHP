@@ -1,7 +1,4 @@
-@import "_variaveis.scss";
-@import "_header.scss";
-
-
-
-
-
+@import "vendor/bootstrap/bootstrap/variables";
+@import  "vendor/bootstrap/bootstrap/mixins";
+@import "variaveis";
+@import "header";

@@ -80,7 +80,7 @@ body{
                         > ul {
                             @include make-md-column(12);
                             padding: 0px;
-                            li {
+                            > li {
                                 @include make-md-column(2.4);
                                 padding: 0px;
                                 > a {
@@ -91,7 +91,7 @@ body{
                                 }
                             }
                             li:hover {
-                                >a{
+                                > a{
                                     background: $color_menu;
                                     color: #09F;  
                                 }

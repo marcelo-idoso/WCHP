@@ -4,9 +4,23 @@
         <meta charset="UTF-8">
         <title>WCHP</title>
         <link rel="stylesheet" href="css/vendor/plugins.css" type="text/css" />
+        <link rel="stylesheet" href="css/vendor/owl-carousel/owl.theme.css" type="text/css" />
+        <link rel="stylesheet" href="css/vendor/owl-carousel/owl.carousel.css" type="text/css" />
         <link rel="stylesheet" href="css/default.css" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/owl-carousel/owl.carousel.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+                autoPlay : 3000,
+                navigation : false, // Show next and prev buttons
+                slideSpeed : 5,
+                paginationSpeed : 400,
+                singleItem:true
+            });
+        });
+        </script>
     </head>
     <body>
         <header>
@@ -72,5 +86,9 @@
   </div><!-- /.container-fluid -->
 </nav>
             </div></div>
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item"><img src="imagem/slide1.jpg" alt="Owl Image" /></div>
+                <div class="item"><img src="imagem/slide2.jpg" alt="Owl Image" /></div>
+            </div>
     </body>
 </html>

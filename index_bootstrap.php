@@ -74,7 +74,7 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-        <li class="active"><a href="#">Link 1<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Início<span class="sr-only">(current)</span></a></li>
         <li><a href="#">Link 2</a></li>
         <li><a href="#">Link 3</a></li>
         <li><a href="#">Link 4</a></li>
@@ -86,9 +86,67 @@
   </div><!-- /.container-fluid -->
 </nav>
             </div></div>
+
             <div id="owl-demo" class="owl-carousel owl-theme">
                 <div class="item"><img src="imagem/slide1.jpg" alt="Owl Image" /></div>
                 <div class="item"><img src="imagem/slide2.jpg" alt="Owl Image" /></div>
             </div>
+            <div class="container" id="widget-menu">
+                <div class="row">
+                    <div id="widget-menu-list">
+                        <div class="box">
+                            <i class="glyphicon glyphicon-list-alt " aria-hidden="true"></i>
+                            <h2>Dicas de Marketing</h2>
+                            <p>Diversas dicas e textos de motivação</p>
+                            <a href="http://www.sitecontabil.com.br/dicas_marketing/" target="_blank">mais</a>
+                        </div>
+                        <div class="box">
+                            <i class="glyphicon glyphicon-folder-close " aria-hidden="true"></i>
+                            <h2>Dicas de Marketing</h2>
+                            <p>Diversas dicas e textos de motivação</p>
+                            <a href="http://www.sitecontabil.com.br/dicas_marketing/" target="_blank">mais</a>
+                        </div>
+                        <div class="box">
+                            <i class="glyphicon glyphicon-list-alt " aria-hidden="true"></i>
+                            <h2>Dicas de Marketing</h2>
+                            <p>Diversas dicas e textos de motivação</p>
+                            <a href="http://www.sitecontabil.com.br/dicas_marketing/" target="_blank">mais</a>
+                        </div>
+                        <div class="box">
+                            <i class="glyphicon glyphicon-list-alt " aria-hidden="true"></i>
+                            <h2>Dicas de Marketing</h2>
+                            <p>Diversas dicas e textos de motivação</p>
+                            <a href="http://www.sitecontabil.com.br/dicas_marketing/" target="_blank">mais</a>
+                        </div>
+                        <div class="box">
+                            <i class="glyphicon glyphicon-list-alt " aria-hidden="true"></i>
+                            <h2>Dicas de Marketing</h2>
+                            <p>Diversas dicas e textos de motivação</p>
+                            <a href="http://www.sitecontabil.com.br/dicas_marketing/" target="_blank">mais</a>
+                        </div>
+                        
+                   
+                    </div>
+                    <div id="widget-menu-list-lateral">
+                        <div id="ultimas_noticias">
+                            <h1>Últimas Postagens</h1>
+                            <ul>
+                                <li>Receita Federal Libera IRRF 2016</li>
+                                <li>Tribunal de Contas Parabenisa a Prodata Informatica</li>
+                                <li>Receita Federal Libera IRRF 2016</li>
+                                <li>Tribunal de Contas Parabenisa a Prodata Informatica</li>
+                                <li>Receita Federal Libera IRRF 2016</li>
+                             </ul>
+                        </div>
+                        <div class="col-md-12" id="publicidade-lateral"> 
+                            <h1>Parceiros </h1>
+                            
+                            <img src="imagem/Publicidade_ou_marketing.jpg" alt="" width="292" height="190"/>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        
     </body>
 </html>

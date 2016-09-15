@@ -6,10 +6,11 @@
             <file>file:/C:/xampp/htdocs/WCHP/scss/_variaveis.scss</file>
             <file>file:/C:/xampp/htdocs/WCHP/index.php</file>
             <file>file:/C:/xampp/htdocs/WCHP/css/default2.css</file>
-            <file>file:/C:/xampp/htdocs/WCHP/index_bootstrap.php</file>
+            <file>file:/C:/xampp/htdocs/WCHP/css/vendor/fortawesome/font-awesome.min.css</file>
             <file>file:/C:/xampp/htdocs/WCHP/scss/default.scss</file>
-            <file>file:/C:/xampp/htdocs/WCHP/scss/vendor/plugins.scss</file>
-            <file>file:/C:/xampp/htdocs/WCHP/scss/vendor/bootstrap/_bootstrap.scss</file>
+            <file>file:/C:/xampp/htdocs/WCHP/index_bootstrap.php</file>
+            <file>file:/C:/xampp/htdocs/WCHP/js/jquery.js</file>
+            <file>file:/C:/xampp/htdocs/WCHP/scss/_header.scss</file>
         </group>
     </open-files>
 </project-private>

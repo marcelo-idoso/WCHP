@@ -206,6 +206,42 @@ body{
             }
         }  
     }
+    
+     > div#likn {
+        margin-top: 25px; 
+        background: #297BAA;
+        padding: 10px;
+        > div#redes {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            > a {
+                width: 60px;
+                cursor: auto;
+                text-decoration: none;
+                line-height: 60px !important;
+                color: rgb(255, 255, 255);
+                font-size: 25px !important;
+                background: rgba(0, 0, 0, .3);
+                text-align: center;
+            }
+            > a .fa {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    }
+    > div#rodape{
+        height: 390px;
+        
+        background: $background_header;;
+       
+    }
 }
 
     

@@ -230,6 +230,33 @@ body > div#widget-menu > div.row > div#widget-menu-list-lateral {
     text-align: right;
     border-bottom: 5px solid #297BAA;
     line-height: 30px; }
+body > div#likn {
+  margin-top: 25px;
+  background: #297BAA;
+  padding: 10px; }
+  body > div#likn > div#redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    body > div#likn > div#redes > a {
+      width: 60px;
+      cursor: auto;
+      text-decoration: none;
+      line-height: 60px !important;
+      color: white;
+      font-size: 25px !important;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center; }
+    body > div#likn > div#redes > a .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+body > div#rodape {
+  height: 390px;
+  background: #ECECEC; }
 
 #owl-demo .item img {
   display: block;

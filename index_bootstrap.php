@@ -6,8 +6,11 @@
         <link rel="stylesheet" href="css/vendor/plugins.css" type="text/css" />
         <link rel="stylesheet" href="css/vendor/owl-carousel/owl.theme.css" type="text/css" />
         <link rel="stylesheet" href="css/vendor/owl-carousel/owl.carousel.css" type="text/css" />
+        <link rel="stylesheet" href="css/vendor/fortawesome/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="css/default.css" type="text/css" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+       
+        <script type="text/javascript" src="js/jquery.js"></script>
+       
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/vendor/owl-carousel/owl.carousel.min.js"></script>
         <script type="text/javascript">
@@ -75,9 +78,9 @@
           </ul>
         </li>
         <li class="active"><a href="#">Início<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Empresa</a></li>
+        <li><a href="#">Contatos</a></li>
+        <li><a href="#">Serviços</a></li>
         
         
       </ul>
@@ -147,6 +150,19 @@
                 </div>
 
         </div>
-        
+       
+        <div class="container-fluid" id="likn">
+            
+            <div id="redes" class=" col-lg-3">
+                <a href="" target="_blank" class="fa fa-facebook-square" aria-hidden="true"></a>
+                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
+                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
+                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
+                <a href="#" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
+                
+            </div>     
+        </div>
+         <div class="container-fluid" id="rodape">
+        </div>
     </body>
 </html>

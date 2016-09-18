@@ -151,18 +151,86 @@
 
         </div>
        
-        <div class="container-fluid" id="likn">
-            
-            <div id="redes" class=" col-lg-3">
-                <a href="" target="_blank" class="fa fa-facebook-square" aria-hidden="true"></a>
-                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
-                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
-                <a href="" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
-                <a href="#" target="_blank" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></a>
-                
-            </div>     
-        </div>
-         <div class="container-fluid" id="rodape">
-        </div>
+    
+	<footer>
+		<div class="container">
+			<div class="content" id="footer-sidebar">
+				<div class="footer-widget footer-widget--about">
+					<a href="#" title="Criando sites profissionais passo a passo">
+                                            <img src="imagem/php_logo.png" class="img-responsive" alt="Criando sites profissionais passo a passo" title="Criando sites profissionais passo a passo">
+					</a>
+					<p>
+						Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scriptaset patrioque scribentur, at pro fugit erts verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+					</p>
+				</div>
+				<div class="footer-widget">
+					<h4 class="widget__title">
+						<span></span> Noticias
+					</h4>
+					<ul class="clearfix" id="fotos">
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Fotos do rodapé">
+								<img src="images/card01.jpg" class="img-responsive" alt="Fotos do rodapé" title="Fotos do rodapé">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-widget">
+					<h4 class="widget__title">
+						<span></span> Localização
+					</h4>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.307953558354!2d-46.189562099999975!3d-23.521423799999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd83dfd10bbd9%3A0x7a904a3e6d7b06e9!2sR.+Bar%C3%A3o+de+Jacegua%C3%AD+-+Centro%2C+Mogi+das+Cruzes+-+SP!5e0!3m2!1spt-BR!2sbr!4v1440075997935" width="100%" height="125" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<div id="redes-sociais">
+			<div class="container">
+				<div class="content">
+					<div id="redes-sociais__container">
+						<ul id="redes-sociais__icons">
+							<li>
+								<a href="#" class="icon icon--facebook" title=""></a>
+							</li>
+							<li>
+								<a href="#" class="icon icon--twitter" title=""></a>
+							</li>
+							<li>
+								<a href="#" class="icon icon--youtube" title=""></a>
+							</li>
+							<li>
+								<a href="#" class="icon icon--gplus" title=""></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+         
     </body>
 </html>

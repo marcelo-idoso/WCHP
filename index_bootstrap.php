@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>WCHP</title>
-        <link rel="stylesheet" href="css/vendor/plugins.css" type="text/css" />
-        <link rel="stylesheet" href="css/vendor/owl-carousel/owl.theme.css" type="text/css" />
-        <link rel="stylesheet" href="css/vendor/owl-carousel/owl.carousel.css" type="text/css" />
-        <link rel="stylesheet" href="css/vendor/fortawesome/font-awesome.min.css" type="text/css" />
-        <link rel="stylesheet" href="css/default.css" type="text/css" />
+        <link rel="stylesheet" href="css/site/vendor/plugins.css" type="text/css" />
+        <link rel="stylesheet" href="css/site/vendor/owl-carousel/owl.theme.css" type="text/css" />
+        <link rel="stylesheet" href="css/site/vendor/owl-carousel/owl.carousel.css" type="text/css" />
+        <link rel="stylesheet" href="css/site/vendor/fortawesome/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/site/default.css" type="text/css" />
        
         <script type="text/javascript" src="js/jquery.js"></script>
        

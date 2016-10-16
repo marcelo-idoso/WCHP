@@ -7,12 +7,13 @@
  */
 return array(
     'modules' => array(
-        'ZFTool',
+        
         'DoctrineModule',
         'DoctrineORMModule',
         'Application',
         'Site',
-        'Painel'
+        'Painel',
+        'Base'
         ),
     'module_listener_options' => array(
         'config_glob_paths' => array('config/autoload/{,*.}{global,local}.php'),

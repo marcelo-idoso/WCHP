@@ -7,7 +7,7 @@
  */
 return array(
     'modules' => array(
-        'ZFTool',
+       
         'DoctrineModule',
         'DoctrineORMModule',
         'Application',

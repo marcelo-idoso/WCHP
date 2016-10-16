@@ -2,13 +2,16 @@
 namespace Painel\Form;
 
 use Zend\Form\Form;
-
+use Painel\Filter\FilterCadEmpresa;
 
 class FormCadEmpresa extends Form{
     
     public function __construct() {
-        parent::__construct('painel');
+        parent::__construct();
         
+        $filter = new FilterCadEmpresa();
+        $this->setAttribute('method', 'POST');
+        $this->setInputFilter($filter->getInputFilter());
         $id = array(
             'name'  => 'id',
             'type'  => 'Hidden'

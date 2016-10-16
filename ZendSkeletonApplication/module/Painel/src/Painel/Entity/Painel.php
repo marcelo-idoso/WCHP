@@ -3,14 +3,15 @@
 namespace Painel\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Zend\Stdlib\Hydrator\ClassMethods;
+use Base\Entity\AbstractEntity;
 /**
  * Painel
  *
  * @ORM\Table(name="painel")
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Painel\Repository\PainelRepository")
  */
-class Painel
+class Painel extends AbstractEntity
 {
     /**
      * @var integer

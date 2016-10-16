@@ -18,7 +18,7 @@ abstract class AbstractService {
         $this->em = $em;
     }
 
-    public function adicionar(Array $data = array()) {
+    public function save(Array $data = array()) {
         if (isset($data['id'])) {
             $entity = $this->em->getReference($this->entity, $data['id']);
 

@@ -19,4 +19,18 @@ abstract class AbstractEntity{
         $hydrator = new ClassMethods();
         return $hydrator->extract($this);
     }
+
+    /**
+     * 
+     * @return type
+     */
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
+    
+    public function exchangeArray() {
+        return get_object_vars($this);
+    }
+
 }

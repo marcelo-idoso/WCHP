@@ -30,7 +30,6 @@ abstract class AbstractService {
         
         $this->em->persist($entity);
         $this->em->flush();
-        $this->em->commit();
         
         return $entity;
     }
@@ -40,8 +39,6 @@ abstract class AbstractService {
         if ($entity) {
             $this->em->remove($entity);
             $this->em->flush();
-            $this->em->commit();
-            
             return $entity ;
         }  else {
             

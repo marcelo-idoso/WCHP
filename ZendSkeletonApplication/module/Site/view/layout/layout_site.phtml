@@ -1,5 +1,20 @@
 <?php echo $this->doctype(); ?>
-
+<?php 
+/*@var $configuracao \Painel\Entity\Painel */
+$configuracao = $this->configItem();
+        // Validações de Configurações Icone Logo
+        if($configuracao->getLogoIco() == NULL){
+            $iconeLogo = 'images/favicon.ico' ;            
+        }else{ 
+            $iconeLogo = $configuracao->getLogoIco();       
+        }
+        // Validações de Configurações Logo
+        if($configuracao->getLogo() == NULL){
+            $ogo = 'imagem/php_logo.png' ;            
+        }else{ 
+            $Logo = $configuracao->getLogo();       
+        }
+?>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -9,9 +24,11 @@
 
         <!-- Le styles -->
         <?php
-        echo $this->headLink(array('rel' => 'shortcut icon',
+        echo $this->headLink(
+                array( 
+                    'rel'  => 'shortcut icon',
                     'type' => 'image/vnd.microsoft.icon',
-                    'href' => $this->basePath() . '/imagem/php_logo.ico'))
+                    'href' => $this->basePath($iconeLogo) ))
                 ->prependStylesheet($this->basePath() . 'css/site/vendor/plugins.css')
                 ->prependStylesheet($this->basePath() . 'css/site/vendor/owl-carousel/owl.theme.css')
                 ->prependStylesheet($this->basePath() . 'css/site/vendor/owl-carousel/owl.carousel.css')
@@ -33,7 +50,7 @@
             <div class="container" id="container"> <!--Inicio do Container -->
                 <div id="topo"><!--Inicio da Div Topo -->
                     <div id="logo">
-                        <img src="imagem/php_logo.png" class="img-responsive" alt="" />
+                        <img src="<?php echo $this->basePath($Logo)?>" class="img-responsive" alt="" />
                     </div>
                     <div id="pesquisa"><!--Inicio da Div pesquisa  -->
                         <p>Olá, Seja bem-Vindo <a href=""> Faça Login </a> ou <a href=""> Cadastre-se</a>. </p>
@@ -90,16 +107,20 @@
             </div><!-- Fim do container -->
         </div><!-- Fim da div menu -->
 
-
+        <div>
+        <?php 
+           
+        ?> 
+        </div>
         <footer>
             <div class="container">
                 <div class="content" id="footer-sidebar">
                     <div class="footer-widget footer-widget--about">
                         <a href="#" title="Criando sites profissionais passo a passo">
-                            <img src="imagem/php_logo.png" class="img-responsive" alt="Criando sites profissionais passo a passo" title="Criando sites profissionais passo a passo">
+                            <img src="<?php echo $this->basePath($Logo)?>" class="img-responsive" alt="Criando sites profissionais passo a passo" title="Criando sites profissionais passo a passo">
                         </a>
                         <p>
-                            Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scriptaset patrioque scribentur, at pro fugit erts verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+                            <?php echo $configuracao->getMimiDescrEmpre() ;?>
                         </p>
                     </div>
                     <div class="footer-widget">
@@ -143,7 +164,7 @@
                         <h4 class="widget__title">
                             <span></span> Localização
                         </h4>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.307953558354!2d-46.189562099999975!3d-23.521423799999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd83dfd10bbd9%3A0x7a904a3e6d7b06e9!2sR.+Bar%C3%A3o+de+Jacegua%C3%AD+-+Centro%2C+Mogi+das+Cruzes+-+SP!5e0!3m2!1spt-BR!2sbr!4v1440075997935" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

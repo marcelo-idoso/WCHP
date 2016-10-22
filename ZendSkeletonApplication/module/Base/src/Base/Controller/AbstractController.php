@@ -42,6 +42,12 @@ abstract class AbstractController extends AbstractActionController {
         $paginator->setCurrentPageNumber($page)
                   ->setDefaultItemCountPerPage(10);
         
+        if( $this->flashMessenger()->hasSuccessMessages()){
+            return new ViewModel(
+                    array(
+                        'success'   => $this->flashMessenger()->getSuccessMessages(),
+                    ));
+        }
         
         return new ViewModel(
                 array(
@@ -72,7 +78,9 @@ abstract class AbstractController extends AbstractActionController {
                 }else {
                     $this->flashMessenger()->addErrorMessage('Não foi Possivel Cadsatrar! tente Novamente');
                 }
-                return $this->redirect()->toRoute($this->route , array('controller' => $this->controller));
+                return $this->redirect()->toRoute($this->route , array(
+                    'controller' => $this->controller,
+                    'action'     => 'inserir'));
             }
         }
         if( $this->flashMessenger()->hasSuccessMessages()){
@@ -109,12 +117,17 @@ abstract class AbstractController extends AbstractActionController {
         }else {
             $form = $this->form;
         }
-        
+
         $request = $this->getRequest();
+        /*Verificar se foi passado algum parametro pela url controller/action/param  se não seta zero*/
         $param = $this->params()->fromRoute('id' , 0);
         
-        $repository = $this->getEm()->getRepository($this->entity)->find($param);
-        
+        if($param > 0) {
+            /*Buscar a entidade no Banco de dados*/
+            $repository = $this->getEm()->getRepository($this->entity)->find($param);
+            /*Preencher dos dados do Banco de dados no Formulario*/
+            $form->bind($repository);
+        }
         if ($repository) {
             
             if ($request->isPost()) {
@@ -132,7 +145,13 @@ abstract class AbstractController extends AbstractActionController {
                     }else {
                         $this->flashMessenger()->addErrorMessage('Não foi Possivel atualizar! tente Novamente');
                     }
-                    return $this->redirect()->toRoute($this->route , array('controller' => $this->controller));
+                    return $this->redirect()
+                                ->toRoute($this->route , 
+                                        array(
+                                            'controller' => $this->controller ,
+                                            'action'     => 'editar',
+                                            'id'         => $param
+                                        ));
                 }
             }
         }else {    
@@ -185,10 +204,12 @@ abstract class AbstractController extends AbstractActionController {
          
          if($service->remove(array('id' => $id))){
               $this->flashMessenger()->addSuccessMessage('Deletado com Sucesso!');
+              
+              
          }else {
               $this->flashMessenger()->addErrorMessage('Não foi Possivel Remover');
          }
          
-         return $this->redirect()->toRoute($this->route , array('controller' => $this->controller));
-    }
+            return $this->redirect()->toRoute($this->route , array('controller' => $this->controller)); 
+    } 
 }

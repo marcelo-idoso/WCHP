@@ -1,0 +1,148 @@
+Zend Framework 2 - Configurar projeto separando site e painel administrativo
+url:http://sourcefacil.blogspot.com.br/search/label/Zend%20Framework%202
+
+Olá, srs. coders!
+Um dos problemas frequentes na maioria dos programadores que iniciam seus estudos em algum Framework, é sua configuração entre o site o sistema que fará o gerenciamento. Neste tutorial, iremos aprender a fazer isto com Zend Framework 2. As vezes isto parece ser uma tarefa simples, porém há casos como o Zend que necessita de muitas configurações. Chega de blá blá blá e vamos codar!
+
+
+As configurações nós fizemos tudo no módulo padrão do Zend, que é o Application. Vamos lá!
+
+1 - Configurando o arquivo module.config
+1.1 - Definindo rota padrão
+Para quem não sabe, o Zend Framework 2 trabalha com rotas, e nessas rotas podemos informar o tipo da rota, definir parametros de url com expressões regules e muito mais. Neste arquivo, por padrão já vem configurado a rota chamada "home" como rota raíz do seu projeto. Agora iremos definir a rota padrão para nosso sistema administrativo. Veja como é simples:
+
+13
+<?php  
+return array(  
+   'admin' => array(  
+       'type' => 'Zend\Mvc\Router\Http\Literal',  
+       'options' => array(  
+       'route'  => '/admin',  
+          'defaults' => array(  
+              'controller' => 'Application\Controller\Index',  
+              'action'   => 'indexAdmin',  
+          ),  
+       ),  
+    ),  
+);
+
+1.2 - Definindo templates
+Agora, temos que configurar o template na qual iremos setar futuramente o layout para o site e para o painel administrativo. Primeiramente, dentro da pasta view do módulo Application, crie dois diretórios, sendo: admin e site (ou um nome qualquer que você deseje). No caso, a minha estrutura é esta:
+view
+ admin
+layout
+	layout.pthml
+site
+application
+index
+index.phtml
+error
+404.phtml
+action.phtml
+error.phtml
+layout
+layout.phtml
+Para quem trabalha com ExtJS, eu não vejo a necessitade de ter diretório error e application. Mas cada um trabalha de uma forma, então faça do jeito que ache melhor.
+
+A estrutura de template padrão é esta:
+
+<?php  
+return array(
+'view_manager' => array(
+        'display_not_found_reason' => true,
+        'display_exceptions'       => true,
+        'doctype'                  => 'HTML5',
+        'not_found_template'       => 'site/error/404',
+        'exception_template'       => 'site/error/index',
+        'template_map' => array(            
+            'admin/layout/layout' => __DIR__ . '/../view/admin/layout/layout.phtml',
+            'site/error/404' => __DIR__ . '/../view/site/error/404.phtml',
+            'site/error/action' => __DIR__ . '/../view/site/error/action.phtml',
+            'site/error/index' => __DIR__ . '/../view/site/error/index.phtml',
+            'site/layout/layout' => __DIR__ . '/../view/site/layout/layout.phtml',
+            'site/application/index/index' => __DIR__ . '/../view/site/application/index/index.phtml',
+        ),
+        'template_path_stack' => array(
+            __DIR__ . '/../view/admin',
+            __DIR__ . '/../view/site',
+        ),
+    ),
+);
+
+Configurando o IndexController
+Agora vamos configurar o IndexController do módulo Application. Para isto, vamos ir em Application/src/Application/Controller/IndexController.php
+
+<?php
+
+namespace Application\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+
+class IndexController extends AbstractActionController{
+    
+    /* *************************************
+     * SITE
+     * *********************************** */
+    public function indexAction(){
+        $this->layout()->setTemplate('site/layout/layout');
+        
+        $viewIndex = new ViewModel();
+        $viewIndex->setTemplate('site/application/index/index');
+        
+        return $viewIndex;
+
+    }
+    
+    /* *************************************
+     * ADMIN
+     * *********************************** */
+    public function indexAdminAction(){
+        return $this->layout()->setTemplate('admin/layout/layout')->terminate();
+    }
+    
+}
+
+No método indexAction é a rota "home", definimos primeiramente o layout padrão que o Zend irá trabalhar para a rota da raíz principal do projeto, depois usamos o objeto ViewModel responsável por setar objetos para o template da ação index. O objeto layout() em geral faz o trabalho do arquivo padrão html, já o ViewModel apenas trabalha numa determinada parte do layout padrão. No Zend, quando você faz no template padrão $this->content, tudo que você setar dentro do ViewModel, o Zend fará a mágica de substituir o conteúdo.
+
+No método indexAdminAction é a rota "admin", eu setei o template padrão para meu sistema administrativo.
+Agora, vou mostrar como trabalhar dentro da rota admin. Dentro do seu módulo (no qual irá criar...), no arquivo module.config, terá a seguinte configuração:
+
+<?php
+return array(
+   'router' => array(
+        'routes' => array(
+            # rota padrão definida no module.config do módulo Application
+            'admin' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/admin',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'indexAdmin',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    # Definindo as rotas filhas da rota principal (admin)  
+                    'usuarios' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Segment',
+                        'options' => array(
+                            'route' => '/usuarios[/][pagina/:pagina][:action][/:id]',
+                            'constraints' => array(
+                                'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'id' => '[0-9]+',
+                                'pagina' => '[0-9]+'
+                            ),
+                            'defaults' => array(
+                                'controller' => 'Usuario\Controller\Usuario',
+                                'action' => 'index'
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    ),
+);
+

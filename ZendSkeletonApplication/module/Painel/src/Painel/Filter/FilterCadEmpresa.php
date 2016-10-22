@@ -7,35 +7,17 @@ use Zend\InputFilter\InputFilterInterface;
 
 class FilterCadEmpresa implements InputFilterAwareInterface{
     
-    public $id;
-    public $logo;
-    public $logo_Icon;
-    public $mimi_Descr_Empre;
     protected $inputFilter ;
 
 
-    public function exchangeArray($dados) {
-        $this->id               = (isset($dados['id'])) ? $dados['id'] : NULL;
-        $this->logo             = (isset($dados['logo'])) ? $dados['logo'] : NULL;
-        $this->logo_Icon        = (isset($dados['logo_ico'])) ? $dados['logo_ico'] : NULL;
-        $this->mimi_Descr_Empre = (isset($dados['mimi_descr_empre'])) ? $dados['mimi_descr_empre'] : NULL;
-    }
-    // adicionar conteúdo a esses métodos
+    /**
+     * Adicionar conteúdo a esses métodos
+     * 
+     * @return \Zend\InputFilter\InputFilter
+     */
     public function getInputFilter() {
         if (!$this->inputFilter){
             $inputFilter = new InputFilter();
-            
-            // Filter ID
-            $inputFilter->add(
-                    array(
-                        'name'      => 'id',
-                        'required'  => TRUE,
-                        'filters'   => array(
-                            array(
-                                'name' => 'Int'
-                            ),
-                        ),
-                    ));
             
             // Filter Logo
             $inputFilter->add(
@@ -114,7 +96,9 @@ class FilterCadEmpresa implements InputFilterAwareInterface{
         } 
         return $this->inputFilter;
     }
+    
 
+    
     public function setInputFilter(InputFilterInterface $inputFilter) {
         throw new \Exception("Não usado");
     }

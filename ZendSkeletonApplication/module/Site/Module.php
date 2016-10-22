@@ -1,7 +1,7 @@
 <?php
 namespace Site;
 
-use Site\Helper\ConfigItem;
+
 
 class Module {
 
@@ -23,17 +23,8 @@ class Module {
     }
 
     public function getViewHelperConfig() {
-        return array(
-            'factories' => array(
-                'configItem' => function ($helperPluginManager) {
-                    $serviceLocator = $helperPluginManager->getServiceLocator();
-                    $viewHelper = new ConfigItem();
-                    $viewHelper-> setServiceLocator($serviceLocator);
-
-                    return $viewHelper;
-                }
-            ),
-        );
+    
+        
     }
 
 }

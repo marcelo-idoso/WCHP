@@ -7,15 +7,12 @@ use Painel\Filter\FilterCadEmpresa;
 class FormCadEmpresa extends Form{
     
     public function __construct() {
-        parent::__construct();
+        parent::__construct(NULL);
         
         $filter = new FilterCadEmpresa();
         $this->setAttribute('method', 'POST');
+        
         $this->setInputFilter($filter->getInputFilter());
-        $id = array(
-            'name'  => 'id',
-            'type'  => 'Hidden'
-        );
         
         $logo = array(
             'name'      => 'logo',
@@ -26,10 +23,10 @@ class FormCadEmpresa extends Form{
         );
         
         $logo_Ico = array(
-            'name'      => "logo_ico",
-            'type'      => "Text",
+            'name'      => 'logo_ico',
+            'type'      => 'Text',
             'options'   => array(
-                'label' => "Icone Logo"
+                'label' => 'Icone Logo'
             )
         );
         $mimi_Descr_Empre = array(
@@ -39,7 +36,7 @@ class FormCadEmpresa extends Form{
                 'label' => 'Pesquina Desquição da empresa'
             )
         );
-        $this->add($id);
+
         $this->add($logo);
         $this->add($logo_Ico);
         $this->add($mimi_Descr_Empre);

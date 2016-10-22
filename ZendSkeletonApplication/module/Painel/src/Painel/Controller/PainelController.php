@@ -4,7 +4,7 @@ namespace Painel\Controller;
 
 
 use Base\Controller\AbstractController;
-
+use Zend\View\Model\ViewModel;
 
 class PainelController extends AbstractController
 {
@@ -16,6 +16,7 @@ class PainelController extends AbstractController
         $this->service      = 'Painel\Service\CadEmpresaService';
         $this->entity       = 'Painel\Entity\Painel' ;
     }
-
+    
+   
 }
 

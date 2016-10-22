@@ -10,7 +10,7 @@
 namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
-
+use Site\Helper\ConfigItem;
 class Module
 {
     public function onBootstrap($e)
@@ -32,6 +32,13 @@ class Module
                         $controller->layout($config['module_layout'][$moduleNamespace]);
                     }
                 }, 100);
+                
+        //Aqui eu declaro o Helper Manager
+         $sm = $e->getApplication()->getServiceManager();
+         $sm->get('viewhelpermanager')->setFactory('ConfigItem', function ($sm) use ($e) {
+                    return new ConfigItem($e, $sm);
+         });
+ 
     }
 
     public function getConfig()
@@ -47,6 +54,14 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
+        );
+    }
+    //Helper
+    public function getViewHelperConfig() {
+        return array(
+            'invokables' => array(
+                'configItem' => 'Site\Helper\ConfigItem',
+            )
         );
     }
 }

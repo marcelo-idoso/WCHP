@@ -32,16 +32,16 @@ class Painel extends AbstractEntity
     /**
      * @var string
      *
-     * @ORM\Column(name="logo_ico", type="string", length=255, nullable=false)
+     * @ORM\Column(name="logo_ico", type="string", length=255, nullable=true)
      */
-    private $logoIco;
+    private $logo_ico;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mimi_descr_empre", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="mimi_descr_empre", type="text", length=65535, nullable=true)
      */
-    private $mimiDescrEmpre;
+    private $mimi_descr_empre;
 
     /**
      * Get id
@@ -86,7 +86,7 @@ class Painel extends AbstractEntity
      */
     public function setLogoIco($logoIco)
     {
-        $this->logoIco = $logoIco;
+        $this->logo_ico = $logoIco;
 
         return $this;
     }
@@ -98,7 +98,7 @@ class Painel extends AbstractEntity
      */
     public function getLogoIco()
     {
-        return $this->logoIco;
+        return $this->logo_ico;
     }
 
     /**
@@ -110,7 +110,7 @@ class Painel extends AbstractEntity
      */
     public function setMimiDescrEmpre($mimiDescrEmpre)
     {
-        $this->mimiDescrEmpre = $mimiDescrEmpre;
+        $this->mimi_descr_empre = $mimiDescrEmpre;
 
         return $this;
     }
@@ -122,6 +122,14 @@ class Painel extends AbstractEntity
      */
     public function getMimiDescrEmpre()
     {
-        return $this->mimiDescrEmpre;
+        return $this->mimi_descr_empre;
+    }
+    
+    public function exchangeArray() {
+        return get_object_vars($this);
+    }
+    
+    public function getArrayCopy() {
+        return get_object_vars($this);
     }
 }

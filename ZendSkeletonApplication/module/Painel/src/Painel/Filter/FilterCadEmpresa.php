@@ -86,12 +86,35 @@ class FilterCadEmpresa implements InputFilterAwareInterface{
                                 'options'   => array(
                                     'encoding'  => 'UTF-8',
                                     'min'       => '1',
-                                    'max'       => '400'
+                                    'max'       => '1000'
                                 ),
                             ),
                         ),
                     ));
-            
+            // Filter Google Maps
+            $inputFilter->add(
+                    array(
+                        'name'      => 'googleMaps',
+                        'required'  => FALSE ,
+                        'filters'   => array(
+                            array(
+                                'name' => 'StripTags'
+                            ),
+                            array(
+                                'name' => 'StringTrim'
+                            ),
+                        ),
+                        'validators' => array(
+                            array(
+                                'name'      => 'StringLength',
+                                'options'   => array(
+                                    'encoding'  => 'UTF-8',
+                                    'min'       => '1',
+                                    'max'       => '1000'
+                                ),
+                            ),
+                        ),
+                    ));
             $this->inputFilter = $inputFilter;
         } 
         return $this->inputFilter;

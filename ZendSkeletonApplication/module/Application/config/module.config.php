@@ -8,25 +8,16 @@ return array(
             'home' => array(
                 'type' => 'Segment',
                 'options' => array(
-                    'route'    => '/[page/:page]',
+                    'route'    => '/home',
                     'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
                         'module'     => 'application',
                     ),
                 ),
             ),
-            'adicionar' => array(
-                'type' => 'Segment',
-                'options' => array(
-                    'route'    => '/adicionar',
-                    'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
-                        'action'     => 'adicionar',
-                        'module'     => 'application',
-                    ),
-                ),
-            ),
+
             'application' => array(
                 'type'    => 'Literal',
                 'options' => array(
@@ -64,7 +55,8 @@ return array(
     ),
     'service_manager' => array(
         'factories' => array(
-            'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+            'translator'    => 'Zend\I18n\Translator\TranslatorServiceFactory',
+            
         ),
     ),
     'translator' => array(
@@ -82,19 +74,29 @@ return array(
             'Application\Controller\Index' => 'Application\Controller\IndexController'
         ),
     ),
+    'module_layouts' => array(
+        'Application' => 'layout/layout.phtml',
+    ),
     'view_manager' => array(
-        'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            
+            'error/404'         => __DIR__ . '/../view/application/error/40.phtml',
         ),
-        'template_path_stack' => array(
-            __DIR__ . '/../view',
+        
+           'template_path_stack' => array(
+           'application' => __DIR__ . '/../view',
         ),
     ),
+    
+    
+    'navigation' => array(
+        'default'   => array(
+            array(
+                'label'     => 'Painel',
+                'router'    => 'painel'
+            )
+        ),
+    ),
+    
 );

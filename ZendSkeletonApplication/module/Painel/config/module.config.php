@@ -4,19 +4,27 @@ namespace Painel;
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Painel\Controller\Painel' => 'Painel\Controller\PainelController',
+            'Painel\Controller\Painel'      => 'Painel\Controller\PainelController',
+            'Painel\Controller\CadEmpresa'  => 'Painel\Controller\CadEmpresaController',
+        ),
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
     // Configuração das Rotas 
     'router' => array(
         'routes' => array(
-            'painel' => array(
-                'type' => 'literal',
+            'cadempresa' => array(
+                'type' => 'Literal',
                 'options' => array(
-                    'route' => '/painel',
+                    'route'    => '/cadempresa',
                     'defaults' => array(
-                        'controller' => 'Painel\Controller\Painel',
+                        '__NAMESPACE__' => 'Painel\Controller',
+                        'controller' => 'Painel\Controller\CadEmpresa',
                         'action'     => 'index',
+                        'module'     => 'painel',
                     ),
                 ),
                 'may_terminate' => true,
@@ -33,13 +41,26 @@ return array(
                             ),
                         ),
                     ),
+                )
+            ),
+            'painel' => array(
+                'type' => 'literal',
+                'options' => array(
+                    'route' => '/painel',
+                    'defaults' => array(
+                        'controller' => 'Painel\Controller\Painel',
+                        'action'     => 'index',
+                    ),
                 ),
             ),
         ),
     ),// Fim Configuração das Rotas
-    'view_manager' => array(
+    'module_layout' => array(
+        'Painel' => 'layout/layout_painel.phtml'
+    ),
+    'view_manager' => array( 
         'template_path_stack' => array(
-            'painel' => __DIR__ . '/../view',
+             __DIR__ . '/../view',
         ),
     ),
     /* configuração do doctrine */
@@ -57,4 +78,30 @@ return array(
             ),
         ),
     ),/* Fim configuração do doctrine */
+    
+
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'painel',
+                'icon'  => 'fa fa-dashboard',
+                'pages' => array(
+                    array(
+                        'label'     => 'Cadastro da Empresa',
+                        'route'     => 'cadempresa',
+                        'abstrac'   => 'TEste' ,
+                        'pages'     => array(
+                                array(
+                                    'label'     => 'Editar',
+                                    'route'     => 'cadempresa/editar2',
+                                    'action'    => 'editar'
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+        
 );

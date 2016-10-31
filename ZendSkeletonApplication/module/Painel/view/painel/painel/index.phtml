@@ -1,78 +1,8 @@
-<?php
-/* @var $entity \Painel\Entity\Painel */
 
-if($this->success){
-    echo '<div class="alert alert-success">'.$this->success[0].'<button type="button" class="close" data-dismiss="alert">X</button></div>';
-}
-if($this->error){
-    echo '<div class="alert alert-error">'.$this->success[0].'<button type="button" class="close" data-dismiss="alert">X</button></div>';
-}
-?>
-
-<div class="table-responsive">
-    <table class="table table-striped">
-        <caption>  Cadastro da Empresa </caption>
-        <thead>
-            <tr>
-                <th>
-                    Codigo
-                </th>
-                <th>
-                    Logo
-                </th>
-                <th>
-                    Icon Logo
-                </th>
-                <th>
-                    Mensagem
-                </th>
-                <th>
-                    Ação
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-            if ($this->data): ?>
-                <?php foreach ($this->data as $entity) : ?>
-                    <tr>
-                        <td>
-                            <?php print_r($entity->getId()); ?>
-                        </td>
-                        <td>
-                            <?php echo $entity->getLogo(); ?>
-                        </td>
-                        <td>
-                            <?php echo $entity->getLogoIco(); ?>
-                        </td>
-                        <td>
-                            <?php echo $entity->getMimiDescrEmpre(); ?>
-                        </td>
-                        <td>
-                            <a class="btn btn-success" href="<?php
-                            echo $this->url('painel/default',
-                                    array(
-                                        'controller' => 'painel',
-                                        'action'     => 'editar',
-                                        'id'         => $entity->getId()));
-                            ?>">
-                                <i class="glyphicon ">ye</i>
-                            </a>
-                            <a class="btn btn-danger" href="<?php
-                            echo $this->url('painel/default',
-                                    array(
-                                        'controller' => 'painel',
-                                        'action'     => 'excluir',
-                                        'id'         => $entity->getId()));
-                            ?>">
-                                <i class="glyphicon glyphicon-remove">x</i>
-                            </a>
-                        </td>
-                    </tr>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>  Nenhum registro encontrado </p>
-<?php endif; ?>
-        </tbody>
-    </table>
-</div>
+<head>
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+  <textarea>Easy (and free!) You should check out our premium features.</textarea>
+</body>

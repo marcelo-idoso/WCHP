@@ -19,6 +19,9 @@ class FormCadEmpresa extends Form{
             'type'      => 'Text',
             'options'   => array(
                 'label' => 'Logo'
+            ),
+            'attributes'    => array(
+                'class' => 'form-control input-lg'
             )
         );
         
@@ -27,25 +30,46 @@ class FormCadEmpresa extends Form{
             'type'      => 'Text',
             'options'   => array(
                 'label' => 'Icone Logo'
+            ),
+            'attributes'    => array(
+                'class' => 'form-control input-lg'
             )
+            
         );
+        
         $mimi_Descr_Empre = array(
             'name'      => 'mimi_descr_empre',
             'type'      => 'TextArea',
             'options'   => array(
                 'label' => 'Pesquina Desquição da empresa'
+            ),
+            'attributes'    => array(
+                'class' => 'form-control input-lg'
             )
+            
         );
-
+        $googleMaps = array(
+            'name'      => 'googleMaps',
+            'type'      => 'TextArea',
+            'options'   => array(
+                'label' => 'GoogleMaps'
+            ),
+            'attributes'    => array(
+                'class' => 'form-control input-lg'
+            )
+            
+        );
         $this->add($logo);
         $this->add($logo_Ico);
         $this->add($mimi_Descr_Empre);
+        $this->add($googleMaps);
         $this->add(array(
             'name' => 'submit',
             'type' => 'submit',
             'attributes'    => array(
                 'value' => 'Salvar',
-                'id'    => 'submitButton'
+                'id'    => 'submitButton',
+                'class' => 'btn btn-primary glyphicon glyphicon-heart'
             )
         ));
     }

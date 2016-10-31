@@ -7,12 +7,10 @@
  */
 return array(
     'modules' => array(
-       
         'DoctrineModule',
         'DoctrineORMModule',
-        'Application',
-        'Site',
         'Painel',
+        'Site',
         'Base'
         ),
     'module_listener_options' => array(

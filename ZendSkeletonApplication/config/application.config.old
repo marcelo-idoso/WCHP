@@ -7,10 +7,9 @@
  */
 return array(
     'modules' => array(
-        
+        'ZToll',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Application',
         'Site',
         'Painel',
         'Base'

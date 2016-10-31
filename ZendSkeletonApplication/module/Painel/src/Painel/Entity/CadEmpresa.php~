@@ -1,0 +1,54 @@
+<?php
+
+namespace Painel\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cadempresa
+ *
+ * @ORM\Table(name="cadempresa")
+ * @ORM\Entity
+ */
+class Cadempresa
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
+     */
+    private $logo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logo_ico", type="string", length=255, nullable=true)
+     */
+    private $logoIco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mimi_descr_empre", type="text", length=65535, nullable=true)
+     */
+    private $mimiDescrEmpre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="googleMaps", type="text", length=65535, nullable=true)
+     */
+    private $googlemaps;
+
+
+}
+

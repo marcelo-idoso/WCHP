@@ -33,11 +33,10 @@ class ConfigItem extends AbstractHelper implements ServiceManagerAwareInterface{
      */
     public function __invoke()
     {
-      $teste = 'getId()';
-        $config = $this->getEntityManager()->getRepository('Painel\Entity\Painel')->find(7);
-        /* @var $entity \Painel\Entity\Painel */
+     
+        $config = $this->getEntityManager()->getRepository('Painel\Entity\CadEmpresa')->find($this->maxId());
+        /* @var $entity \Painel\Entity\CadEmpresa */
         
-               
         return $config;
         // we could return a default value, or throw exception etc here
         
@@ -82,9 +81,19 @@ class ConfigItem extends AbstractHelper implements ServiceManagerAwareInterface{
     
     public function getRepository() {
         if (NULL === $this->em) {
-            $this->em = $this->getEntityManager()->getRepository('Painel\Entity\Painel');
+            $this->em = $this->getEntityManager()->getRepository('Painel\Entity\CadEmpresa');
         }
         return $this->em;
     }
+    
+    public function maxId() {
+        return  $this->getEntityManager()
+                        ->createQueryBuilder('c')
+                        ->select('MAX(c.id)')
+                        ->from('Painel\Entity\CadEmpresa' , 'c')
+                        ->getQuery()
+                        ->getSingleScalarResult();
+    }
+  
 
 }

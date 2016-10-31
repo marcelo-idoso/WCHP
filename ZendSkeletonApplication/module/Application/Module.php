@@ -11,6 +11,7 @@ namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Site\Helper\ConfigItem;
+
 class Module
 {
     public function onBootstrap($e)

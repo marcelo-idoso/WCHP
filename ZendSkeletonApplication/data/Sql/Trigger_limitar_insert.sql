@@ -1,11 +1,10 @@
-DROP trigger trigger_limite_insert;
-
+DROP trigger if exists trigger_limite_insert;
 DELIMITER //
 CREATE definer='root'@'localhost' TRIGGER trigger_limite_insert BEFORE INSERT
-ON painel
+ON cadempresa
 FOR EACH ROW
 BEGIN
-	IF (SELECT count(ID) FROM PAINEL) > 0 THEN
+	IF (SELECT count(ID) FROM CADEMPRESA) > 0 THEN
 		 CALL `'Não e Possivel Cadastrar Mais que Um registro'`;
 	END IF;
 end;

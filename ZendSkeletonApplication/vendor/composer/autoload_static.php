@@ -26,6 +26,7 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         array (
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
         ),
     );
 
@@ -58,11 +59,23 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
     );
 
     public static $prefixesPsr0 = array (
         'Z' => 
         array (
+            'ZfcUser' => 
+            array (
+                0 => __DIR__ . '/..' . '/zf-commons/zfc-user/src',
+            ),
+            'ZfcBase' => 
+            array (
+                0 => __DIR__ . '/..' . '/zf-commons/zfc-base/src',
+            ),
             'Zend\\' => 
             array (
                 0 => __DIR__ . '/..' . '/zendframework/zendframework/library',
@@ -105,10 +118,6 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
             'Doctrine\\Common\\Collections\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
-            ),
-            'Doctrine\\Common\\Annotations\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
             'Doctrine\\Common\\' => 
             array (
@@ -476,6 +485,8 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/PHP/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/PHP/Token.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'ZfcBase\\Module' => __DIR__ . '/..' . '/zf-commons/zfc-base/Module.php',
+        'ZfcUser\\Module' => __DIR__ . '/..' . '/zf-commons/zfc-user/Module.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

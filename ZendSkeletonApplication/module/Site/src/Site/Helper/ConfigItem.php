@@ -36,7 +36,7 @@ class ConfigItem extends AbstractHelper implements ServiceManagerAwareInterface{
      
         $config = $this->getEntityManager()->getRepository('Painel\Entity\CadEmpresa')->find($this->maxId());
         /* @var $entity \Painel\Entity\CadEmpresa */
-        
+
         return $config;
         // we could return a default value, or throw exception etc here
         

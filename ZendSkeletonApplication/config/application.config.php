@@ -7,11 +7,15 @@
  */
 return array(
     'modules' => array(
+        
+        'ZfcBase',
+        'ZfcUser',
+        
         'DoctrineModule',
         'DoctrineORMModule',
+        'Base',
         'Painel',
-        'Site',
-        'Base'
+        'Site'
         ),
     'module_listener_options' => array(
         'config_glob_paths' => array('config/autoload/{,*.}{global,local}.php'),

@@ -352,4 +352,6 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'ZfcBase\\Module' => $vendorDir . '/zf-commons/zfc-base/Module.php',
+    'ZfcUser\\Module' => $vendorDir . '/zf-commons/zfc-user/Module.php',
 );

@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ZfcUser' => array($vendorDir . '/zf-commons/zfc-user/src'),
+    'ZfcBase' => array($vendorDir . '/zf-commons/zfc-base/src'),
     'Zend\\' => array($vendorDir . '/zendframework/zendframework/library'),
     'ZendXml\\' => array($vendorDir . '/zendframework/zendxml/library'),
     'ZendDiagnostics\\' => array($vendorDir . '/zendframework/zenddiagnostics/src'),
@@ -16,7 +18,6 @@ return array(
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
-    'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
     'DoctrineORMModule\\' => array($vendorDir . '/doctrine/doctrine-orm-module/src'),
     'DoctrineModule\\' => array($vendorDir . '/doctrine/doctrine-module/src'),

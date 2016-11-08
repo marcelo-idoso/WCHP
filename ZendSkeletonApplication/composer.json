@@ -11,7 +11,10 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.2.6",
         "phpunit/phpunit": "3.7.*",
+        "zf-commons/zfc-user": "dev-master",
+        "zf-commons/zfc-user-doctrine-orm": "dev-master",
         "zendframework/zftool": "dev-master",
-        "doctrine/doctrine-orm-module": "0.*"
+        "doctrine/doctrine-orm-module": "0.*" 
+        
     }
 }

@@ -8,11 +8,16 @@
 return array(
     'modules' => array(
         'ZToll',
+        'ZfcBase',
+        'ZfcUser',
+        'ZfcUserDoctrineORM',
         'DoctrineModule',
         'DoctrineORMModule',
-        'Site',
+        'Base',
         'Painel',
-        'Base'
+        'Site'
+        
+        
         ),
     'module_listener_options' => array(
         'config_glob_paths' => array('config/autoload/{,*.}{global,local}.php'),

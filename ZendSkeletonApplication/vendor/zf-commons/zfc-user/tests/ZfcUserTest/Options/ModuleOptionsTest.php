@@ -288,6 +288,24 @@ class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers ZfcUser\Options\ModuleOptions::getUseRegistrationFormCaptcha
+     * @covers ZfcUser\Options\ModuleOptions::setUseRegistrationFormCaptcha
+     */
+    public function testSetGetUseRegistrationFormCaptcha()
+    {
+        $this->options->setUseRegistrationFormCaptcha(true);
+        $this->assertTrue($this->options->getUseRegistrationFormCaptcha());
+    }
+
+    /**
+     * @covers ZfcUser\Options\ModuleOptions::getUseRegistrationFormCaptcha
+     */
+    public function testGetUseRegistrationFormCaptcha()
+    {
+        $this->assertFalse($this->options->getUseRegistrationFormCaptcha());
+    }
+
+    /**
      * @covers ZfcUser\Options\ModuleOptions::getUserEntityClass
      * @covers ZfcUser\Options\ModuleOptions::setUserEntityClass
      */
@@ -339,5 +357,37 @@ class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
     public function testGetTableName()
     {
         $this->assertEquals('user', $this->options->getTableName());
+    }
+
+    /**
+     * @covers ZfcUser\Options\ModuleOptions::getFormCaptchaOptions
+     * @covers ZfcUser\Options\ModuleOptions::setFormCaptchaOptions
+     */
+    public function testSetGetFormCaptchaOptions()
+    {
+        $expected = array(
+            'class'   => 'someClass',
+            'options' => array(
+                'anOption' => 3,
+            ),
+        );
+        $this->options->setFormCaptchaOptions($expected);
+        $this->assertEquals($expected, $this->options->getFormCaptchaOptions());
+    }
+
+    /**
+     * @covers ZfcUser\Options\ModuleOptions::getFormCaptchaOptions
+     */
+    public function testGetFormCaptchaOptions()
+    {
+        $expected = array(
+            'class'   => 'figlet',
+            'options' => array(
+                'wordLen'    => 5,
+                'expiration' => 300,
+                'timeout'    => 300,
+            ),
+        );
+        $this->assertEquals($expected, $this->options->getFormCaptchaOptions());
     }
 }

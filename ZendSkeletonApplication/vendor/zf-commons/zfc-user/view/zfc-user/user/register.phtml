@@ -2,14 +2,13 @@
 
 <?php
 if (!$this->enableRegistration) {
-    echo $this->translate('Registration is disabled');
+    print "Registration is disabled";
     return;
 }
 $form = $this->registerForm;
 $form->prepare();
 $form->setAttribute('action', $this->url('zfcuser/register'));
 $form->setAttribute('method', 'post');
-$form->setAttribute('autocomplete', 'off');
 ?>
 
 <?php echo $this->form()->openTag($form) ?>

@@ -3,19 +3,12 @@
 namespace ZfcUser\Form;
 
 use ZfcBase\InputFilter\ProvidesEventsInputFilter;
+use ZfcUser\Module as ZfcUser;
 use ZfcUser\Options\RegistrationOptionsInterface;
-use Zend\Validator\ValidatorInterface;
 
 class RegisterFilter extends ProvidesEventsInputFilter
 {
-    /**
-     * @var ValidatorInterface
-     */
     protected $emailValidator;
-
-    /**
-     * @var ValidatorInterface
-     */
     protected $usernameValidator;
 
     /**
@@ -23,7 +16,7 @@ class RegisterFilter extends ProvidesEventsInputFilter
      */
     protected $options;
 
-    public function __construct(ValidatorInterface $emailValidator, ValidatorInterface $usernameValidator, RegistrationOptionsInterface $options)
+    public function __construct($emailValidator, $usernameValidator, RegistrationOptionsInterface $options)
     {
         $this->setOptions($options);
         $this->emailValidator = $emailValidator;
@@ -37,6 +30,7 @@ class RegisterFilter extends ProvidesEventsInputFilter
                     array(
                         'name'    => 'StringLength',
                         'options' => array(
+                            'min' => 3,
                             'max' => 255,
                         ),
                     ),
@@ -118,7 +112,6 @@ class RegisterFilter extends ProvidesEventsInputFilter
     public function setEmailValidator($emailValidator)
     {
         $this->emailValidator = $emailValidator;
-
         return $this;
     }
 
@@ -130,7 +123,6 @@ class RegisterFilter extends ProvidesEventsInputFilter
     public function setUsernameValidator($usernameValidator)
     {
         $this->usernameValidator = $usernameValidator;
-
         return $this;
     }
 

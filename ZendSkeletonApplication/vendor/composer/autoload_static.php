@@ -24,7 +24,6 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         ),
         'D' => 
         array (
-            'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
         ),
@@ -51,10 +50,6 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Doctrine\\Instantiator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
-        ),
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
@@ -68,6 +63,10 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
     public static $prefixesPsr0 = array (
         'Z' => 
         array (
+            'ZfcUserDoctrineORM' => 
+            array (
+                0 => __DIR__ . '/..' . '/zf-commons/zfc-user-doctrine-orm/src',
+            ),
             'ZfcUser' => 
             array (
                 0 => __DIR__ . '/..' . '/zf-commons/zfc-user/src',
@@ -126,6 +125,10 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
             'DoctrineORMModule\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/doctrine-orm-module/src',
+            ),
+            'DoctrineORMModuleTest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/doctrine-orm-module/tests',
             ),
             'DoctrineModule\\' => 
             array (
@@ -486,6 +489,10 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/PHP/Token.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'ZfcBase\\Module' => __DIR__ . '/..' . '/zf-commons/zfc-base/Module.php',
+        'ZfcUserDoctrineORM\\Entity\\User' => __DIR__ . '/..' . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Entity/User.php',
+        'ZfcUserDoctrineORM\\Mapper\\User' => __DIR__ . '/..' . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php',
+        'ZfcUserDoctrineORM\\Module' => __DIR__ . '/..' . '/zf-commons/zfc-user-doctrine-orm/Module.php',
+        'ZfcUserDoctrineORM\\Options\\ModuleOptions' => __DIR__ . '/..' . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Options/ModuleOptions.php',
         'ZfcUser\\Module' => __DIR__ . '/..' . '/zf-commons/zfc-user/Module.php',
     );
 

@@ -63,6 +63,21 @@ interface RegistrationOptionsInterface
     public function getUserFormTimeout();
 
     /**
+     * set use a captcha in registration form
+     *
+     * @param bool $useRegistrationFormCaptcha
+     * @return ModuleOptions
+     */
+    public function setUseRegistrationFormCaptcha($useRegistrationFormCaptcha);
+
+    /**
+     * get use a captcha in registration form
+     *
+     * @return bool
+     */
+    public function getUseRegistrationFormCaptcha();
+
+    /**
      * set login after registration
      *
      * @param bool $loginAfterRegistration
@@ -76,4 +91,19 @@ interface RegistrationOptionsInterface
      * @return bool
      */
     public function getLoginAfterRegistration();
+
+    /**
+     * set form CAPTCHA options
+     *
+     * @param array $formCaptchaOptions
+     * @return ModuleOptions
+     */
+    public function setFormCaptchaOptions($formCaptchaOptions);
+
+    /**
+     * get form CAPTCHA options
+     *
+     * @return array
+     */
+    public function getFormCaptchaOptions();
 }

@@ -8,11 +8,6 @@ use Zend\Stdlib\RequestInterface as Request;
 class AdapterChainEvent extends Event
 {
     /**
-     * @var Request
-     */
-    private $request;
-
-    /**
      * getIdentity
      *
      * @return mixed

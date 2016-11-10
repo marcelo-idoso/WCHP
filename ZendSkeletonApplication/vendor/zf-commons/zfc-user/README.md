@@ -44,6 +44,11 @@ Features / Goals
 * Out-of-the-box support for Doctrine2 _and_ Zend\Db [COMPLETE]
 * Registration form protected with CAPTCHA [IN PROGRESS] \(Needs more options\)
 * Robust event system to allow for extending [IN PROGRESS]
+* Support for additional authentication mechanisms via plugins (Google,
+  Facebook, LDAP, etc) [INCOMPLETE]
+* Optional E-mail address verification [INCOMPLETE]
+* Forgot Password [INCOMPLETE]
+* Provide ActionController plugin and view helper [INCOMPLETE]
 
 Installation
 ------------
@@ -198,8 +203,6 @@ The following options are available:
 - **allowed_login_states** - Array value, states which are allowing user to login.
   When user tries to login, is his/her state one of the following? Include null if
   you want user's with no state to login as well.
-
-> Note: **user_login_widget_view_template** is currently not used. To override the view templates the module uses, please see [this](https://github.com/ZF-Commons/ZfcUser/blob/master/docs/override-view-scripts.md) example.
 
 Changing Registration Captcha Element
 -------------------------------------

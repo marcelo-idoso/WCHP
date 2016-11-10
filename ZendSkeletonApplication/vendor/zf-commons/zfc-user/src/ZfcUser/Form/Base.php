@@ -2,6 +2,7 @@
 
 namespace ZfcUser\Form;
 
+use Zend\Form\Form;
 use Zend\Form\Element;
 use ZfcBase\Form\ProvidesEventsForm;
 
@@ -43,7 +44,6 @@ class Base extends ProvidesEventsForm
 
         $this->add(array(
             'name' => 'password',
-            'type' => 'password',
             'options' => array(
                 'label' => 'Password',
             ),
@@ -54,7 +54,6 @@ class Base extends ProvidesEventsForm
 
         $this->add(array(
             'name' => 'passwordVerify',
-            'type' => 'password',
             'options' => array(
                 'label' => 'Password Verify',
             ),
@@ -62,6 +61,17 @@ class Base extends ProvidesEventsForm
                 'type' => 'password'
             ),
         ));
+
+        if ($this->getRegistrationOptions()->getUseRegistrationFormCaptcha()) {
+            $this->add(array(
+                'name' => 'captcha',
+                'type' => 'Zend\Form\Element\Captcha',
+                'options' => array(
+                    'label' => 'Please type the following text',
+                    'captcha' => $this->getRegistrationOptions()->getFormCaptchaOptions(),
+                ),
+            ));
+        }
 
         $submitElement = new Element\Button('submit');
         $submitElement
@@ -75,7 +85,7 @@ class Base extends ProvidesEventsForm
         ));
 
         $this->add(array(
-            'name' => 'id',
+            'name' => 'userId',
             'type' => 'Zend\Form\Element\Hidden',
             'attributes' => array(
                 'type' => 'hidden'

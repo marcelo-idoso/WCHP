@@ -53,6 +53,16 @@ return array(
                     ),
                 ),
             ),
+            'login' => array(
+                'type' => 'literal',
+                'options' => array(
+                    'route' => '/login',
+                    'defaults' => array(
+                        'controller' => 'Painel\Controller\Painel',
+                        'action'     => 'login',
+                    ),
+                ),
+            ),
         ),
     ),// Fim Configuração das Rotas
     'module_layout' => array(

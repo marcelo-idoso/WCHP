@@ -4,7 +4,9 @@ namespace ZfcUser\Options;
 
 use Zend\Stdlib\AbstractOptions;
 
-class ModuleOptions extends AbstractOptions implements UserControllerOptionsInterface, UserServiceOptionsInterface
+class ModuleOptions extends AbstractOptions implements
+    UserControllerOptionsInterface,
+    UserServiceOptionsInterface
 {
     /**
      * Turn off strict options mode
@@ -92,6 +94,11 @@ class ModuleOptions extends AbstractOptions implements UserControllerOptionsInte
     protected $enableDisplayName = false;
 
     /**
+     * @var bool
+     */
+    protected $useRegistrationFormCaptcha = false;
+
+    /**
      * @var int
      */
     protected $passwordCost = 14;
@@ -102,6 +109,17 @@ class ModuleOptions extends AbstractOptions implements UserControllerOptionsInte
 
     protected $tableName = 'user';
 
+    /**
+     * @var array
+     */
+    protected $formCaptchaOptions = array(
+        'class'   => 'figlet',
+        'options' => array(
+            'wordLen'    => 5,
+            'expiration' => 300,
+            'timeout'    => 300,
+        ),
+    );
 
     /**
      * set login redirect route
@@ -434,6 +452,28 @@ class ModuleOptions extends AbstractOptions implements UserControllerOptionsInte
     }
 
     /**
+     * set use a captcha in registration form
+     *
+     * @param bool $useRegistrationFormCaptcha
+     * @return ModuleOptions
+     */
+    public function setUseRegistrationFormCaptcha($useRegistrationFormCaptcha)
+    {
+        $this->useRegistrationFormCaptcha = $useRegistrationFormCaptcha;
+        return $this;
+    }
+
+    /**
+     * get use a captcha in registration form
+     *
+     * @return bool
+     */
+    public function getUseRegistrationFormCaptcha()
+    {
+        return $this->useRegistrationFormCaptcha;
+    }
+
+    /**
      * set user entity class name
      *
      * @param string $userEntityClass
@@ -495,5 +535,27 @@ class ModuleOptions extends AbstractOptions implements UserControllerOptionsInte
     public function getTableName()
     {
         return $this->tableName;
+    }
+
+    /**
+     * set form CAPTCHA options
+     *
+     * @param array $formCaptchaOptions
+     * @return ModuleOptions
+     */
+    public function setFormCaptchaOptions($formCaptchaOptions)
+    {
+        $this->formCaptchaOptions = $formCaptchaOptions;
+        return $this;
+    }
+
+    /**
+     * get form CAPTCHA options
+     *
+     * @return array
+     */
+    public function getFormCaptchaOptions()
+    {
+        return $this->formCaptchaOptions;
     }
 }

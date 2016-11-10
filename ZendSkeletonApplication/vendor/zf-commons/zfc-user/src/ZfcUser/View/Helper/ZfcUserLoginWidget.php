@@ -27,23 +27,27 @@ class ZfcUserLoginWidget extends AbstractHelper
      */
     public function __invoke($options = array())
     {
-        $options += array(
-            'render' => true,
-            'redirect' => false,
-            'enableRegistration' => false,
-        );
+        if (array_key_exists('render', $options)) {
+            $render = $options['render'];
+        } else {
+            $render = true;
+        }
+        if (array_key_exists('redirect', $options)) {
+            $redirect = $options['redirect'];
+        } else {
+            $redirect = false;
+        }
 
         $vm = new ViewModel(array(
             'loginForm' => $this->getLoginForm(),
-            'redirect'  => $options['redirect'],
-            'enableRegistration'  => $options['enableRegistration'],
+            'redirect'  => $redirect,
         ));
         $vm->setTemplate($this->viewTemplate);
-        if ($options['render']) {
+        if ($render) {
             return $this->getView()->render($vm);
+        } else {
+            return $vm;
         }
-
-        return $vm;
     }
 
     /**

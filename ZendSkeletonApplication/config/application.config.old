@@ -7,9 +7,9 @@
  */
 return array(
     'modules' => array(
-        'ZToll',
         'ZfcBase',
         'ZfcUser',
+        'ZfcUserDoctrineORM',
         'ZfcUserDoctrineORM',
         'DoctrineModule',
         'DoctrineORMModule',

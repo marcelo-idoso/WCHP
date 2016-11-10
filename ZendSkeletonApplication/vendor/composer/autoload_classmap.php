@@ -353,5 +353,9 @@ return array(
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'ZfcBase\\Module' => $vendorDir . '/zf-commons/zfc-base/Module.php',
+    'ZfcUserDoctrineORM\\Entity\\User' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Entity/User.php',
+    'ZfcUserDoctrineORM\\Mapper\\User' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php',
+    'ZfcUserDoctrineORM\\Module' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/Module.php',
+    'ZfcUserDoctrineORM\\Options\\ModuleOptions' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Options/ModuleOptions.php',
     'ZfcUser\\Module' => $vendorDir . '/zf-commons/zfc-user/Module.php',
 );

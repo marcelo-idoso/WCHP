@@ -71,6 +71,10 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
             array (
                 0 => __DIR__ . '/..' . '/zf-commons/zfc-user/src',
             ),
+            'ZfcRbac\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/zf-commons/zfc-rbac/src',
+            ),
             'ZfcBase' => 
             array (
                 0 => __DIR__ . '/..' . '/zf-commons/zfc-base/src',
@@ -94,6 +98,13 @@ class ComposerStaticInit3efa156e661183c157c615d8c6ec6a29
             'ZFTool\\' => 
             array (
                 0 => __DIR__ . '/..' . '/zendframework/zftool/src',
+            ),
+        ),
+        'R' => 
+        array (
+            'Rbac\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/zfr/rbac/src',
             ),
         ),
         'D' => 
